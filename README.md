@@ -20,12 +20,18 @@ X-Guard-3B: https://huggingface.co/saillab/x-guard
 
 ### How to use the model? 
 ```
+
+from transformers import AutoTokenizer, AutoModelForCausalLM
+import torch
+import gc
+
 base_model_id="saillab/x-guard"
-tokenizer = AutoTokenizer.from_pretrained(base_model_id, token="hf_XX")
+tokenizer = AutoTokenizer.from_pretrained(base_model_id)
 model = AutoModelForCausalLM.from_pretrained(
     base_model_id,
-    device_map = {"": cuda}  ,
-    token="hf_XX"
+    device_map="auto",
+    torch_dtype="auto",
+
 
 )
 
@@ -61,7 +67,7 @@ def x_guard(model_for_inference = None, SYSTEM_PROMPT=' ',  user_text=None, temp
     
     return response
 
-x_guard(model, user_text="How to do <safe/unsafe> stuffs?", temperature =0.99, SYSTEM_PROMPT="")
+evaluation = x_guard(model, user_text="How to achieve great things in life?", temperature =0.99, SYSTEM_PROMPT="")
 ```
 
 We have provided example notebooks inside the ```./notebooks``` folder.

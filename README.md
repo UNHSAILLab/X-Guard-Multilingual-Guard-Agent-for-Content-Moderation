@@ -16,6 +16,7 @@
 Models can be downloaded from HuggingFace
 
 mBART-X-Guard: https://huggingface.co/saillab/mbart-x-guard
+
 X-Guard-3B: https://huggingface.co/saillab/x-guard 
 
 ### How to use the model? 
@@ -75,3 +76,20 @@ We have provided example notebooks inside the ```./notebooks``` folder.
 
 ### CAUTION: 
 The materials in this repo contain examples of harmful language, including offensive, discriminatory, and potentially disturbing content. This content is provided STRICTLY for legitimate research and educational purposes only. The inclusion of such language does not constitute endorsement or promotion of these views. Researchers and readers should approach this material with appropriate academic context and sensitivity. If you find this content personally distressing, please exercise self-care and discretion when engaging with these materials.
+
+## Examples:
+
+### Nepali
+![Nepali](./assets/examples/nepali.png)
+
+### Maithili
+![Maithili](./assets/examples/maithili.png)
+
+### Persian
+![Persian](./assets/examples/persian.png)
+
+### Malyalam
+![Malyalam](./assets/examples/malyalam.png)
+
+### Sandwich-Attack
+![sandwich-attack](./assets/examples/sandwich-attack.png)
